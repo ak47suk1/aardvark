@@ -1,5 +1,6 @@
 Aardvark 2.3 for Moodle
 Codename: Penguin
+Status: Stable
 Icons: Fatcow Hosting
 
 UPDATES
@@ -8,6 +9,7 @@ UPDATES
 CORE
 - Bye bye fishy. Default background is a bluey blur
 - Removing the default from Background Image now creates a blank background
+- Horizontal Repeat added to Background settings
 - Font changed to Verdana
 - Autohide disabled
 - Optional gap between profile bar and content
@@ -27,9 +29,13 @@ COURSE PAGES
 - Added style for new "section per page" headers
 - Replaced legacy td code with div code for Course Category styles
 
+MODULES
+- Fixed Quiz report display
+
 FOOTER
 - Footerwrap extended to 100% for Fixed width
 - CEOP Button available for UK and Australia
+- New mono style social icons
 
 KNOWN ISSUES
 -----------------------

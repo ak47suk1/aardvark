@@ -1336,3 +1336,11 @@ overflow:hidden;              /* don't show excess chars */
 white-space:nowrap;           /* force single line */
 width: 125px;                 /* fixed width */
 }
+
+.pagelayout-report .no-overflow {
+overflow: auto;
+}
+
+.pagelayout-report #page-content {
+overflow: auto;
+}

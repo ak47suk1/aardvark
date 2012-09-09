@@ -136,7 +136,7 @@ function aardvark_set_backimage($css, $backimage) {
 }
 
 function aardvark_set_backposition($css, $backposition = 'no-repeat', $tag = '[[setting:backposition]]'){
-if($backposition == "no-repeat" || $backposition == "no-repeat fixed" || $backposition == "repeat"){
+if($backposition == "no-repeat" || $backposition == "no-repeat fixed" || $backposition == "repeat" || $backposition == "repeat-x"){
 $css = str_replace($tag, $backposition, $css);
 }
 return $css;

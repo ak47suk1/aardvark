@@ -23,7 +23,9 @@ $string['backposition'] = 'Background Image Position';
 $string['backpositiondesc'] = 'Choose between a centred image or a tiled image.';
 $string['backpositioncentred'] = 'Centred';
 $string['backpositionfixed'] = 'Centred (Fixed)';
-$string['backpositiontiled'] = 'Tiled';
+$string['backpositiontiled'] = 'Repeat (Tiled)';
+$string['backpositionrepeat'] = 'Repeat (Horizonal)';
+
 
 $string['backcolor'] = 'Background Colour';
 $string['backcolordesc'] = 'Change the colour of the background. (This is the area either side of the main content and does not affect the main content area)';

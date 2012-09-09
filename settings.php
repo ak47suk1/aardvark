@@ -36,7 +36,7 @@ $name = 'theme_aardvark/backposition';
 $title = get_string('backposition','theme_aardvark');
 $description = get_string('backpositiondesc', 'theme_aardvark');
 $default = 'no-repeat';
-$choices = array('no-repeat'=>get_string('backpositioncentred','theme_aardvark'), 'no-repeat fixed'=>get_string('backpositionfixed','theme_aardvark'), 'repeat'=>get_string('backpositiontiled','theme_aardvark'));
+$choices = array('no-repeat'=>get_string('backpositioncentred','theme_aardvark'), 'no-repeat fixed'=>get_string('backpositionfixed','theme_aardvark'), 'repeat'=>get_string('backpositiontiled','theme_aardvark'), 'repeat-x'=>get_string('backpositionrepeat','theme_aardvark'));
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
 
