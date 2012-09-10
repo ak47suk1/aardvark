@@ -16,6 +16,7 @@ CORE
 - New icon for "Edit String"
 - Underline removed from links
 - New icons for Assignment, Book and Hot Potatoes modules
+- Added Mary's fix to solve "Add activity/resource" window z-index issue (2.3+)
 
 PROFILE BAR / HEADER
 - Add custom content to Profile Bar from Aardvark settings 
@@ -41,5 +42,4 @@ KNOWN ISSUES
 -----------------------
 
 CORE
-- "Add activity/resource" window tucked under Profile Bar (2.3+)
 - Profile Bar not visible on IE9 Compatibility Mode (Disable compatibility mode - set by default for intranet sites - to view correctly)

@@ -1344,3 +1344,12 @@ overflow: auto;
 .pagelayout-report #page-content {
 overflow: auto;
 }
+
+/* Important z-index fixes from Mary
+-------------------------*/
+.yui-skin-sam .yui-panel-container {
+    z-index: 999999!important;
+}
+div.moodle-dialogue-base div.yui3-widget{
+    z-index: 999999!important;
+}
