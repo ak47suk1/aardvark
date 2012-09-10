@@ -43,3 +43,4 @@ KNOWN ISSUES
 
 CORE
 - Profile Bar not visible on IE9 Compatibility Mode (Disable compatibility mode - set by default for intranet sites - to view correctly)
+- Placeholder text doesn't appear in USERNAME and PASSWORD fields in IE as it's an HTML5 attribute
