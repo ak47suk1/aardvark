@@ -7,7 +7,7 @@ echo date("Y"); echo " "; echo $PAGE->theme->settings->copyright; ?></h4>
             if ($hasceop) {?><ul><li><a href="<?php echo $PAGE->theme->settings->ceop;?> "><img src="<?php echo $OUTPUT->pix_url('ceopreport', 'theme')?>" /></a></li></ul> <?php } else {}?> 
 	</div>
 
-	<div class="footer_block">
+		<div class="footerdisclaimer" id="footerdisclaimer">
 		<?php if ($hasdisclaimer) {?><h4><?php echo get_string('disclaimer','theme_aardvark');?></h4> <?php } else {}?>
         <?php if ($hasdisclaimer) {echo $PAGE->theme->settings->disclaimer;} else {}?>
         
@@ -24,6 +24,7 @@ echo date("Y"); echo " "; echo $PAGE->theme->settings->copyright; ?></h4>
 <?php if ($hasflickr) {?><a href="<?php echo $PAGE->theme->settings->flickr;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/flickr', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($haspicasa) {?><a href="<?php echo $PAGE->theme->settings->picasa;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/picasa', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hastumblr) {?><a href="<?php echo $PAGE->theme->settings->tumblr;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/tumblr', 'theme')?>" /></li></a> <?php } else {}?>
+<?php if ($hasinstagram) {?><a href="<?php echo $PAGE->theme->settings->instagram;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/instagram', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hasblogger) {?><a href="<?php echo $PAGE->theme->settings->blogger;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/blogger', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($haslinkedin) {?><a href="<?php echo $PAGE->theme->settings->linkedin;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/linkedin', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hasyoutube) {?><a href="<?php echo $PAGE->theme->settings->youtube;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/youtube', 'theme')?>" /></li></a> <?php } else {}?>

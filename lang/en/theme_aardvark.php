@@ -13,8 +13,9 @@ $string['variablewidth'] = 'Fluid Width (Experimental)';
 
 $string['gap'] = 'Mind the Gap';
 $string['gapdesc'] = 'Choose whether your site has a gap between the menu bar and the page contents.';
-$string['yesgap'] = 'Yes';
-$string['nogap'] = 'No';
+
+$string['hidemenu'] = 'Hide Menu when Logged Out';
+$string['hidemenudesc'] = 'Force users to log in before accessing the menu. If YES then menu options are hidden from users before they log in.';
 
 $string['backimage'] = 'Background Image';
 $string['backimagedesc'] = 'Change the background image in the graphic wrap. It\'s currently a cloud blue blur, but if that\'s making you a bit light headed then paste the URL of the image you want to use in here or clear it for a blank background.';
@@ -38,6 +39,9 @@ $string['menubackcolordesc'] = 'Change the colour of the menu bar.';
 
 $string['menuhovercolor'] = 'Menu Hover Colour';
 $string['menuhovercolordesc'] = 'Change the colour of linked items on the menu bar.';
+
+$string['titledate'] = 'Frontpage Date';
+$string['titledatedesc'] = 'Display today&apos;s date on the frontpage.';
 
 $string['disclaimer'] = 'Disclaimer';
 $string['disclaimerdesc'] = 'The content from this textarea will be displayed in the footer of every page.';
@@ -80,6 +84,9 @@ $string['picasadesc'] = 'Enter the URL of your Picasa page. (i.e http://picasawe
 $string['tumblr'] = 'Tumblr URL';
 $string['tumblrdesc'] = 'Enter the URL of your Tumblr page. (i.e http://mycollege.tumblr.com)';
 
+$string['instagram'] = 'Instagram URL';
+$string['instagramdesc'] = 'Enter the URL of your Instagram page (via web.stagram). (i.e http://web.stagram.com/n/mycollege/)';
+
 $string['blogger'] = 'Blogger URL';
 $string['bloggerdesc'] = 'Enter the URL of your Blogger page. (i.e http://www.blogger.com/mycollege)';
 
@@ -91,3 +98,5 @@ $string['youtubedesc'] = 'Enter the URL of your YouTube channel. (i.e http://www
 
 $string['vimeo'] = 'Vimeo URL';
 $string['vimeodesc'] = 'Enter the URL of your Vimeo channel. (i.e http://www.vimeo.com/mycollege)';
+
+$string['credit'] = 'Based on an original theme created by Shaun Daubney';

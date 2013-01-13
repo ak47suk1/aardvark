@@ -1,46 +1,29 @@
-Aardvark 2.3 for Moodle
-Codename: Penguin
-Status: Stable
+Aardvark 2.4 BETA for Moodle
+Codename: Magpie
+Status: BETA
 Icons: Fatcow Hosting
 
-UPDATES
+WHAT'S NEW?
 -----------------------
 
-CORE
-- Bye bye fishy. Default background is a bluey blur
-- Removing the default from Background Image now creates a blank background
-- Horizontal Repeat added to Background settings
-- Font changed to Verdana
-- Autohide disabled
-- Optional gap between profile bar and content
-- New icon for "Edit String"
-- Underline removed from links
-- New icons for Assignment, Book and Hot Potatoes modules
-- Added Mary's fix to solve "Add activity/resource" window z-index issue (2.3+)
+More customisation in setting including…
 
-PROFILE BAR / HEADER
-- Add custom content to Profile Bar from Aardvark settings 
-- Updated "My Files" URL
+- Choose if menu is shown or hidden before login or to guest users
+- Add the date to the frontage
 
-BLOCKS
-- Padding reduced to (5px 2px)
-- Margin between tree menu items improved
+Many fixes for Moodle 2.4 and in general including…
 
-COURSE PAGES
-- Added style for new "section per page" headers
-- Replaced legacy td code with div code for Course Category styles
+- Layout changes to gradebook
+- Fixes to footer
 
-MODULES
-- Fixed Quiz report display
 
-FOOTER
-- Footerwrap extended to 100% for Fixed width
-- CEOP Button available for UK and Australia
-- New mono style social icons
-
-KNOWN ISSUES
+WHAT'S TO DO?
 -----------------------
 
-CORE
-- Profile Bar not visible on IE9 Compatibility Mode (Disable compatibility mode - set by default for intranet sites - to view correctly)
-- Placeholder text doesn't appear in USERNAME and PASSWORD fields in IE as it's an HTML5 attribute
+- Icons need to be reproduced as SVG
+- Currently rewriting the entire code as pure PHP
+
+WHAT'S WRONG?
+-----------------------
+
+Currently no known issues (touch wood)

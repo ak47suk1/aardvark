@@ -48,13 +48,23 @@ overflow:hidden;
 }
 
 #page-title-inner {
+float:left;
 font-size:22px;
 text-transform:uppercase;
 font-weight:400;
 color:#333;
 padding:8px 0 0 6px;
 background:#fff;
-width:100%;
+overflow:hidden;
+}
+#page-title-date {
+float:right;
+font-size:22px;
+text-transform:uppercase;
+font-weight:400;
+color:#999;
+padding:8px 0 0 6px;
+background:#fff;
 overflow:hidden;
 }
 
@@ -320,10 +330,12 @@ div#jcontrols_button {
 width:100%;
 margin-left:auto;
 margin-right:auto;
+margin-top:4px;
 clear:both;
 background:#fff;
 height:35px;
-border-bottom:#eee 1px solid;
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
 }
 
 div.jcontrolsleft {
@@ -416,9 +428,8 @@ padding:5px;
 
 .block div.header {
 padding-top:0 !important;
-min-height:33px;
 height:auto !important;
-background:#eee;
+background:#fff;
 margin:0 !important;
 }
 
@@ -432,19 +443,19 @@ margin-right:3px;
 }
 
 .title h2 {
-font-size:12px;
+font-size:18px;
 text-transform:uppercase;
 font-weight:400;
 color:#333;
 margin:0 !important;
-padding:8px 0 0 10px;
+padding:0 0 0 2px;
 }
 
 .block div.block_action input,.block div.block_action img {
 margin-top:3px;
 margin-right:3px;
 position:relative;
-top:6px;
+
 }
 
 .block div.content {
@@ -538,7 +549,7 @@ clear:both;
 background:[[setting:menubackcolor]] url([[pix:theme|menu/menugrad]]) repeat-x;
 box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 top:0;
-z-index:9998;
+z-index:5001;
 margin:0;
 position: fixed;
 }
@@ -606,7 +617,7 @@ background:transparent !important;
 font-size:12px;
 text-transform:uppercase;
 font-weight:400;
-line-height:45px !important;
+line-height:46px !important;
 cursor:pointer !important;
 border-right:none !important;
 border-top:none !important;
@@ -740,7 +751,7 @@ padding-top:0px;
 padding-bottom:2px;
 display:block;
 font-weight:400;
-margin:3px 0 2px;
+
 }
 
 #page-course-info h2.main,h3.sectionname,h3.section-title,h2.main a,h3.main a,div.loginpanel h2,div.signuppanel h2,div.hd h3.main {
@@ -935,7 +946,7 @@ padding:2px;
 }
 
 .course-content .current {
-background:#ffc;
+background:#fff8a7 !important;
 }
 
 .course-content .main .content {
@@ -1295,12 +1306,26 @@ div.que,div.generalbox,div.section {
 border:1px solid #dadada;
 }
 
-.footer_block,.footersocial {
+.footer_block {
 float:left;
 height:130px;
 overflow:hidden;
 width:30%;
 padding:10px;
+}
+.footerdisclaimer {
+float:left;
+height:130px;
+overflow:hidden;
+width:30%;
+padding:10px;
+}
+.footersocial {
+float:right;
+height:130px;
+overflow:hidden;
+padding:10px;
+width:30%;
 }
 
 #page-mod-quiz-edit div.quizcontents {
@@ -1345,6 +1370,10 @@ overflow: auto;
 overflow: auto;
 }
 
+#footerwrapper h4 {
+text-transform:uppercase;
+}
+
 /* Important z-index fixes from Mary
 -------------------------*/
 .yui-skin-sam .yui-panel-container {
@@ -1352,4 +1381,32 @@ overflow: auto;
 }
 div.moodle-dialogue-base div.yui3-widget{
     z-index: 999999!important;
+}
+
+div.que, div.generalbox, div.section {
+    border: 0px solid #ffffff;
+}
+
+.feedback_item_box_left {
+	background:#f9f9f9;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding:10px;
+}
+
+#fitem_id_advancedgrading td.descriptionreadonly {
+width:300px;
+}
+
+.gradingtable .yui3-menu .yui3-menu-content {
+	background:#fff !important;
+	border: 1px solid #CCC !important;
+}
+
+.gradingtable .yui3-menu .yui3-menu-content a {
+	color:#3d3d3d !important;
+}
+
+.flexible th {
+white-space: normal;
 }

@@ -38,18 +38,18 @@ if (!isloggedin() or isguestuser()) {
 	echo '</form>';
 	echo '</div>';
 	echo '</div>';
-} else { ?>
-	
-	<div class="profilepic" id="profilepic">
-	<?php
+} else { 
+
+ echo html_writer::start_tag('div', array('id'=>'profilepic','class'=>'profilepic'));
 		
 			echo '<a href="'.$CFG->wwwroot.'/user/view.php?id='.$USER->id.'&amp;course='.$COURSE->id.'"><img src="'.$CFG->wwwroot.'/user/pix.php?file=/'.$USER->id.'/f1.jpg" width="80px" height="80px" title="'.$USER->firstname.' '.$USER->lastname.'" alt="'.$USER->firstname.' '.$USER->lastname.'" /></a>';
 		
-	?>
-</div> <?php
+	echo html_writer::end_tag('div');
 	echo '<div class="profilename" id="profilename">';
 
 	echo '<a href="'.$CFG->wwwroot.'/user/view.php?id='.$USER->id.'&amp;course='.$COURSE->id.'">'.$USER->firstname.'</a>';
+	
+	
 
 ?>
 
@@ -91,7 +91,7 @@ if ($hasprofilebarcustom) {
 			<td valign="top"> <ul>
 			<a href="<?php echo $CFG->wwwroot; ?>/my"><li><img src="<?php echo $OUTPUT->pix_url('profile/courses', 'theme')?>" />&nbsp;<?php echo get_string('mycourses');?></li></a>
             			<a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><li><img src="<?php echo $OUTPUT->pix_url('profile/profile', 'theme')?>" />&nbsp;<?php echo get_string('viewprofile');?></li></a>
-                        <a href="<?php echo $CFG->wwwroot; ?>/user/editadvanced.php"><li><img src="<?php echo $OUTPUT->pix_url('profile/editprofile', 'theme')?>" />&nbsp;<?php echo get_string('editmyprofile');?></li></a>
+                        <a href="<?php echo $CFG->wwwroot; ?>/user/edit.php"><li><img src="<?php echo $OUTPUT->pix_url('profile/editprofile', 'theme')?>" />&nbsp;<?php echo get_string('editmyprofile');?></li></a>
 
             			<a href="<?php echo $CFG->wwwroot; ?>/user/files.php"><li><img src="<?php echo $OUTPUT->pix_url('profile/myfiles', 'theme')?>" />&nbsp;<?php echo get_string('myfiles');?></li></a>
 

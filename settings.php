@@ -19,7 +19,16 @@ $name = 'theme_aardvark/gap';
 $title = get_string('gap','theme_aardvark');
 $description = get_string('gapdesc', 'theme_aardvark');
 $default = 70;
-$choices = array(70=>get_string('yesgap','theme_aardvark'), 45=>get_string('nogap','theme_aardvark'));
+$choices = array(70=>get_string('yes',''), 45=>get_string('no',''));
+$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+$settings->add($setting);
+
+// Hide Menu
+$name = 'theme_aardvark/hidemenu';
+$title = get_string('hidemenu','theme_aardvark');
+$description = get_string('hidemenudesc', 'theme_aardvark');
+$default = 1;
+$choices = array(1=>get_string('yes',''), 0=>get_string('no',''));
 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 $settings->add($setting);
 
@@ -101,6 +110,16 @@ $default = '';
 $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
+// Title Date setting
+
+$name = 'theme_aardvark/titledate';
+$title = get_string('titledate','theme_aardvark');
+$description = get_string('titledatedesc', 'theme_aardvark');
+$default = 1;
+$choices = array(1=>get_string('yes',''), 0=>get_string('no',''));
+$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+$settings->add($setting);
+
 // Copyright setting
 
 $name = 'theme_aardvark/copyright';
@@ -177,6 +196,15 @@ $settings->add($setting);
 $name = 'theme_aardvark/tumblr';
 $title = get_string('tumblr','theme_aardvark');
 $description = get_string('tumblrdesc', 'theme_aardvark');
+$default = '';
+$setting = new admin_setting_configtext($name, $title, $description, $default);
+$settings->add($setting);
+
+// Instagram url setting
+
+$name = 'theme_aardvark/instagram';
+$title = get_string('instagram','theme_aardvark');
+$description = get_string('instagramdesc', 'theme_aardvark');
 $default = '';
 $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
