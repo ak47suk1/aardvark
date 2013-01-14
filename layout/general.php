@@ -146,7 +146,6 @@ echo $OUTPUT->doctype();
  echo html_writer::start_tag('div', array('id'=>'region-main'));
  echo html_writer::start_tag('div', array('class'=>'region-content'));
  echo html_writer::start_tag('div', array('id'=>'mainpadder'));
- echo core_renderer::MAIN_CONTENT_TOKEN;
  echo html_writer::end_tag('div');
  echo html_writer::end_tag('div'); 
  echo html_writer::end_tag('div');
