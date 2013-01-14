@@ -104,8 +104,12 @@ echo $OUTPUT->doctype();
 
 // Page Header (REQUIRED)
 
+ if ($hasheading || $hasnavbar || !empty($courseheader)) {
  echo html_writer::start_tag('div', array('id'=>'page-header'));
  echo html_writer::end_tag('div');
+ if (!empty($courseheader)) { 
+ echo html_writer::start_tag('div', array('id'=>'course-header'));
+ echo $courseheader; echo html_writer::end_tag('div'); }
 
 // Start of Moodle CONTENT
 
@@ -146,6 +150,7 @@ echo $OUTPUT->doctype();
  }
  echo html_writer::end_tag('div');
  echo html_writer::end_tag('div'); 
+ }
 
 // Page content
 
@@ -195,6 +200,11 @@ echo $OUTPUT->doctype();
  echo html_writer::end_tag('div'); 
  
 // Footer 
+ if (!empty($coursefooter)) {
+ echo html_writer::start_tag('div', array('id'=>'course-footer'));
+ echo $coursefooter;
+ echo html_writer::end_tag('div');
+ }
  if ($hasfooter) {
  echo html_writer::start_tag('div', array('id'=>'footerwrapper'));
  echo html_writer::start_tag('div', array('id'=>'footerinner'));

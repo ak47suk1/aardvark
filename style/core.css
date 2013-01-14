@@ -45,6 +45,7 @@ height:0;
 background:#fff;
 width:100%;
 overflow:hidden;
+margin-bottom: 6px;
 }
 
 #page-title-inner {
@@ -124,29 +125,31 @@ border:1px solid #fff;
 
 #profilelogin {
 text-align:right;
-width:390px;
-margin-right:0;
-margin-top:auto;
+width:300px;
 float:right;
 height:45px;
 }
 
 #profilelogin ul li {
-padding-left:10px;
+padding-left:4px;
 padding-right:0;
 display:inline;
-margin-right:0;
+margin-right:0px !important;
 color:#aeaeae;
 }
 
+.profilelogin ul {
+margin-top:10px;
+margin-right:0px;
+margin-left:0px;
+margin-bottom:0px;	
+}
+
 .profilelogin .loginform {
-width:7em;
-margin-left:4px;
+width:6em;
 display:inline;
 background:#f9f9f9;
-border:1px solid #ccc;
 color:#333;
-padding:4px;
 }
 
 #profilename {
@@ -1409,4 +1412,26 @@ width:300px;
 
 .flexible th {
 white-space: normal;
+}
+
+input[type="text"] {
+border: 1px solid #bbb;
+padding: 4px;
+background: #fff;
+}
+
+input[type="password"] {
+border: 1px solid #bbb;
+padding: 4px;
+background: #fff;
+}
+
+input[type="submit"] {
+border: 1px solid #bbb;
+padding: 4px;
+background: #eee;
+}
+
+input[type="submit"]:hover {
+background: #ddd;
 }
