@@ -9,6 +9,16 @@ $showsidepost = $hassidepost && !$PAGE->blocks->region_completely_docked('side-p
 $hashidemenu = (!empty($PAGE->theme->settings->hidemenu));
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
+
+$courseheader = $coursecontentheader = $coursecontentfooter = $coursefooter = '';
+if (empty($PAGE->layout_options['nocourseheaderfooter'])) {
+    $courseheader = $OUTPUT->course_header();
+    $coursecontentheader = $OUTPUT->course_content_header();
+    if (empty($PAGE->layout_options['nocoursefooter'])) {
+        $coursecontentfooter = $OUTPUT->course_content_footer();
+        $coursefooter = $OUTPUT->course_footer();
+    }
+}
 $haslogo = (!empty($PAGE->theme->settings->logo));
 $hastitledate = (!empty($PAGE->theme->settings->titledate));
 $hasceop = (!empty($PAGE->theme->settings->ceop));
@@ -146,6 +156,9 @@ echo $OUTPUT->doctype();
  echo html_writer::start_tag('div', array('id'=>'region-main'));
  echo html_writer::start_tag('div', array('class'=>'region-content'));
  echo html_writer::start_tag('div', array('id'=>'mainpadder'));
+ echo $coursecontentheader;
+ echo $OUTPUT->main_content();
+ echo $coursecontentfooter;
  echo html_writer::end_tag('div');
  echo html_writer::end_tag('div'); 
  echo html_writer::end_tag('div');
