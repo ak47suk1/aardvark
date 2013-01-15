@@ -8,17 +8,15 @@
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<div id="page-wrapper" class="embedded">
-	<div id="page">
+<div id="page">
 
 <!-- END OF HEADER -->
 
     <div id="content" class="clearfix">
-
+        <?php echo $OUTPUT->main_content() ?>
     </div>
 
 <!-- START OF FOOTER -->
-	</div>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>
