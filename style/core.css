@@ -375,10 +375,9 @@ margin:5px 0 0;
 }
 
 #footerwrapper {
-background:#eee repeat-x left top;
+background:#f3f3f3;
 width:100%;
 margin:[[setting:gap]] auto 0px;
-border-top:1px solid #ccc;
 }
 
 #footerinner {
@@ -620,7 +619,7 @@ background:transparent !important;
 font-size:12px;
 text-transform:uppercase;
 font-weight:400;
-line-height:46px !important;
+line-height:45px !important;
 cursor:pointer !important;
 border-right:none !important;
 border-top:none !important;
@@ -1217,13 +1216,14 @@ display:inline;
 #themeorigin {
 margin-left:auto;
 margin-right:auto;
-color:#bbb;
+color:#ccc;
 font-size:10px;
 padding:10px 10px 10px 20px;
+text-shadow: 1px 1px 0px #fff;
 }
 
 #themeorigin a,a.hover,a.visited {
-color:#bbb;
+color:#ccc;
 font-size:10px;
 text-decoration:none;
 }
@@ -1374,6 +1374,8 @@ overflow: auto;
 
 #footerwrapper h4 {
 text-transform:uppercase;
+color:#555;
+font-weight:normal;
 }
 
 /* Important z-index fixes from Mary
@@ -1426,11 +1428,22 @@ background: #fff;
 }
 
 input[type="submit"] {
-border: 1px solid #bbb;
-padding: 4px;
-background: #eee;
+background: #0370ea;
+background: -moz-linear-gradient(top,#008dfd 0,#0370ea 100%);
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#008dfd),color-stop(100%,#0370ea));
+background: -webkit-linear-gradient(top,#008dfd 0,#0370ea 100%);
+background: -o-linear-gradient(top,#008dfd 0,#0370ea 100%);
+background: -ms-linear-gradient(top,#008dfd 0,#0370ea 100%);
+background: linear-gradient(top,#008dfd 0,#0370ea 100%);
+border: 1px solid #076bd2;
+color: #fff !important;
+display: inline-block;
+padding: 4px 4px;
+text-align: center;
+text-decoration: none !important;
+text-shadow: 1px 1px 1px #076bd2;
 }
 
 input[type="submit"]:hover {
-background: #ddd;
+background: #0370ea;
 }
