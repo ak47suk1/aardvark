@@ -142,7 +142,7 @@ color:#aeaeae;
 margin-top:8px;
 margin-right:0px;
 margin-left:0px;
-margin-bottom:0px;	
+margin-bottom:0px;
 }
 
 .profilelogin .loginform {
@@ -1381,21 +1381,21 @@ font-weight:normal;
 /* Important z-index fixes from Mary
 -------------------------*/
 .yui-skin-sam .yui-panel-container {
-    z-index: 999999!important;
+z-index: 999999!important;
 }
 div.moodle-dialogue-base div.yui3-widget{
-    z-index: 999999!important;
+z-index: 999999!important;
 }
 
 div.que, div.generalbox, div.section {
-    border: 0px solid #ffffff;
+border: 0px solid #ffffff;
 }
 
 .feedback_item_box_left {
-	background:#f9f9f9;
-	margin-top:2px;
-	margin-bottom:2px;
-	padding:10px;
+background:#f9f9f9;
+margin-top:2px;
+margin-bottom:2px;
+padding:10px;
 }
 
 #fitem_id_advancedgrading td.descriptionreadonly {
@@ -1403,12 +1403,12 @@ width:300px;
 }
 
 .gradingtable .yui3-menu .yui3-menu-content {
-	background:#fff !important;
-	border: 1px solid #CCC !important;
+background:#fff !important;
+border: 1px solid #CCC !important;
 }
 
 .gradingtable .yui3-menu .yui3-menu-content a {
-	color:#3d3d3d !important;
+color:#3d3d3d !important;
 }
 
 .flexible th {
