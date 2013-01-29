@@ -12,12 +12,12 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custom
 
 $courseheader = $coursecontentheader = $coursecontentfooter = $coursefooter = '';
 if (empty($PAGE->layout_options['nocourseheaderfooter'])) {
-    $courseheader = $OUTPUT->course_header();
-    $coursecontentheader = $OUTPUT->course_content_header();
-    if (empty($PAGE->layout_options['nocoursefooter'])) {
-        $coursecontentfooter = $OUTPUT->course_content_footer();
-        $coursefooter = $OUTPUT->course_footer();
-    }
+$courseheader = $OUTPUT->course_header();
+$coursecontentheader = $OUTPUT->course_content_header();
+if (empty($PAGE->layout_options['nocoursefooter'])) {
+$coursecontentfooter = $OUTPUT->course_content_footer();
+$coursefooter = $OUTPUT->course_footer();
+}
 }
 $haslogo = (!empty($PAGE->theme->settings->logo));
 $hastitledate = (!empty($PAGE->theme->settings->titledate));
@@ -40,188 +40,170 @@ $isfrontpage = $PAGE->bodyid == "page-site-index";
 
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
-    $bodyclasses[] = 'side-pre-only';
+$bodyclasses[] = 'side-pre-only';
 } else if ($showsidepost && !$showsidepre) {
-    $bodyclasses[] = 'side-post-only';
+$bodyclasses[] = 'side-post-only';
 } else if (!$showsidepost && !$showsidepre) {
-    $bodyclasses[] = 'content-only';
+$bodyclasses[] = 'content-only';
 }
 if ($hascustommenu) {
-    $bodyclasses[] = 'has_custom_menu';
+$bodyclasses[] = 'has_custom_menu';
 }
 
 echo $OUTPUT->doctype();
 
 // Head
-
- echo html_writer::start_tag('html', array($OUTPUT->htmlattributes()));
- echo html_writer::start_tag('head');
- echo html_writer::start_tag('title');
- echo $PAGE->title;
- echo html_writer::end_tag('title');
- echo html_writer::empty_tag('link', array('rel'=>'shortcut icon','href'=>$OUTPUT->pix_url('favicon', 'theme')));
- echo $OUTPUT->standard_head_html();
- echo html_writer::end_tag('head');
+echo html_writer::start_tag('html', array($OUTPUT->htmlattributes()));
+echo html_writer::start_tag('head');
+echo html_writer::start_tag('title');
+echo $PAGE->title;
+echo html_writer::end_tag('title');
+echo html_writer::empty_tag('link', array('rel'=>'shortcut icon','href'=>$OUTPUT->pix_url('favicon', 'theme')));
+echo $OUTPUT->standard_head_html();
+echo html_writer::end_tag('head');
 
 // Body
-	
- echo html_writer::start_tag('body', array('id'=>$PAGE->bodyid,'class'=>$PAGE->bodyclasses.' '.join(' ', $bodyclasses)));
- echo $OUTPUT->standard_top_of_body_html() ;
+echo html_writer::start_tag('body', array('id'=>$PAGE->bodyid,'class'=>$PAGE->bodyclasses.' '.join(' ', $bodyclasses)));
+echo $OUTPUT->standard_top_of_body_html() ;
 
 // Menu Bar
+echo html_writer::start_tag('div', array('id'=>'menuwrap'));
+echo html_writer::start_tag('div', array('id'=>'menuwrap960'));
 
- echo html_writer::start_tag('div', array('id'=>'menuwrap'));
- echo html_writer::start_tag('div', array('id'=>'menuwrap960'));
- 
 // Home icon
- 
- echo html_writer::start_tag('div', array('id'=>'homeicon'));
- echo html_writer::start_tag('a', array('href'=>$CFG->wwwroot, 'class'=>'homeiconlink'));
- if ($haslogo) {
- echo html_writer::empty_tag('img', array('src'=>$PAGE->theme->settings->logo)); }
- else { 
- echo html_writer::empty_tag('img', array('src'=>$OUTPUT->pix_url('logo', 'theme'))); }
- echo html_writer::end_tag('a');
- echo html_writer::end_tag('div');
+echo html_writer::start_tag('div', array('id'=>'homeicon'));
+echo html_writer::start_tag('a', array('href'=>$CFG->wwwroot, 'class'=>'homeiconlink'));
+if ($haslogo) {
+echo html_writer::empty_tag('img', array('src'=>$PAGE->theme->settings->logo)); }
+else {
+echo html_writer::empty_tag('img', array('src'=>$OUTPUT->pix_url('logo', 'theme'))); }
+echo html_writer::end_tag('a');
+echo html_writer::end_tag('div');
 
 // Custom menu
-	
- if ((!isloggedin()) && ($hashidemenu)){}
- elseif ($hascustommenu) { 
- echo html_writer::start_tag('div', array('id'=>'menuitemswrap'));
- echo html_writer::start_tag('div', array('id'=>'custommenu'));
- echo $custommenu;
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); }
+if ((!isloggedin()) && ($hashidemenu)){}
+elseif ($hascustommenu) {
+echo html_writer::start_tag('div', array('id'=>'menuitemswrap'));
+echo html_writer::start_tag('div', array('id'=>'custommenu'));
+echo $custommenu;
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div'); }
 
-// Profile block
- 
- include('profileblock.php');
-
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div');
-				
+// Profile block 
+include('profileblock.php');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
 
 // Page Header (REQUIRED)
-
- if ($hasheading || $hasnavbar || !empty($courseheader)) {
- echo html_writer::start_tag('div', array('id'=>'page-header'));
- echo html_writer::end_tag('div');
- if (!empty($courseheader)) { 
- echo html_writer::start_tag('div', array('id'=>'course-header'));
- echo $courseheader; echo html_writer::end_tag('div'); }
+if ($hasheading || $hasnavbar || !empty($courseheader)) {
+echo html_writer::start_tag('div', array('id'=>'page-header'));
+echo html_writer::end_tag('div');
+if (!empty($courseheader)) {
+echo html_writer::start_tag('div', array('id'=>'course-header'));
+echo $courseheader; echo html_writer::end_tag('div'); }
 
 // Start of Moodle CONTENT
-
- echo html_writer::start_tag('div', array('id'=>'contentwrapper'));
+echo html_writer::start_tag('div', array('id'=>'contentwrapper'));
 
 // Page title header
-
- echo html_writer::start_tag('div', array('id'=>'page-title'));
- echo html_writer::start_tag('div', array('id'=>'page-title-inner'));
- echo $PAGE->title;
- echo html_writer::end_tag('div');
+echo html_writer::start_tag('div', array('id'=>'page-title'));
+echo html_writer::start_tag('div', array('id'=>'page-title-inner'));
+echo $PAGE->title;
+echo html_writer::end_tag('div');
 
 // Frontpage date (if enabled)
+if (($isfrontpage) && ($hastitledate)) {
+echo html_writer::start_tag('div', array('id'=>'page-title-date'));
+echo date("l d F Y");
+echo html_writer::end_tag('div');
+} 
+else {}
+echo html_writer::end_tag('div');
 
- if (($isfrontpage) && ($hastitledate)) {
- echo html_writer::start_tag('div', array('id'=>'page-title-date'));
- echo date("l d F Y");
- echo html_writer::end_tag('div');
- } 
- else {}
- echo html_writer::end_tag('div');
- 
 // Nav bar
-
- echo html_writer::start_tag('div', array('id'=>'jcontrols_button'));
- echo html_writer::start_tag('div', array('class'=>'jcontrolsleft'));
- if ($hasnavbar) {
- echo html_writer::start_tag('div', array('class'=>'navbar clearfix'));
- echo html_writer::start_tag('div', array('class'=>'breadcrumb'));
- echo $OUTPUT->navbar();
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div');
- }
- echo html_writer::end_tag('div');
- echo html_writer::start_tag('div', array('id'=>'ebutton'));
- if ($hasnavbar) { 
- echo $PAGE->button; 
- }
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); 
- }
+echo html_writer::start_tag('div', array('id'=>'jcontrols_button'));
+echo html_writer::start_tag('div', array('class'=>'jcontrolsleft'));
+if ($hasnavbar) {
+echo html_writer::start_tag('div', array('class'=>'navbar clearfix'));
+echo html_writer::start_tag('div', array('class'=>'breadcrumb'));
+echo $OUTPUT->navbar();
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+}
+echo html_writer::end_tag('div');
+echo html_writer::start_tag('div', array('id'=>'ebutton'));
+if ($hasnavbar) {
+echo $PAGE->button;
+}
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+}
 
 // Page content
+echo html_writer::start_tag('div', array('id'=>'page-content'));
+echo html_writer::start_tag('div', array('id'=>'region-main-box'));
+echo html_writer::start_tag('div', array('id'=>'region-post-box'));
+echo html_writer::start_tag('div', array('id'=>'region-main-wrap'));
+echo html_writer::start_tag('div', array('id'=>'region-main'));
+echo html_writer::start_tag('div', array('class'=>'region-content'));
+echo html_writer::start_tag('div', array('id'=>'mainpadder'));
+echo $coursecontentheader;
+echo $OUTPUT->main_content();
+echo $coursecontentfooter;
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
 
- echo html_writer::start_tag('div', array('id'=>'page-content'));
- echo html_writer::start_tag('div', array('id'=>'region-main-box'));
- echo html_writer::start_tag('div', array('id'=>'region-post-box'));
- echo html_writer::start_tag('div', array('id'=>'region-main-wrap'));
- echo html_writer::start_tag('div', array('id'=>'region-main'));
- echo html_writer::start_tag('div', array('class'=>'region-content'));
- echo html_writer::start_tag('div', array('id'=>'mainpadder'));
- echo $coursecontentheader;
- echo $OUTPUT->main_content();
- echo $coursecontentfooter;
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); 
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); 
- 
- if ($hassidepre) { 
- echo html_writer::start_tag('div', array('id'=>'region-pre', 'class'=>'block-region'));
- echo html_writer::start_tag('div', array('class'=>'region-content'));
- echo $OUTPUT->blocks_for_region('side-pre');
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); 
- } 
- 
- if ($hassidepost) {
- echo html_writer::start_tag('div', array('id'=>'region-post', 'class'=>'block-region'));
- echo html_writer::start_tag('div', array('class'=>'region-content'));
- echo $OUTPUT->blocks_for_region('side-post');
- echo html_writer::end_tag('div');
- echo html_writer::end_tag('div'); 
- } 
- 
- echo html_writer::end_tag('div'); 
- echo html_writer::end_tag('div'); 
- echo html_writer::end_tag('div'); 
- 
+if ($hassidepre) {
+echo html_writer::start_tag('div', array('id'=>'region-pre', 'class'=>'block-region'));
+echo html_writer::start_tag('div', array('class'=>'region-content'));
+echo $OUTPUT->blocks_for_region('side-pre');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+}
+
+if ($hassidepost) {
+echo html_writer::start_tag('div', array('id'=>'region-post', 'class'=>'block-region'));
+echo html_writer::start_tag('div', array('class'=>'region-content'));
+echo $OUTPUT->blocks_for_region('side-post');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+}
+
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+echo html_writer::end_tag('div');
+
 // End of content
-
- echo html_writer::end_tag('div'); 
- echo html_writer::empty_tag('br', array('style'=>'clear: both;')); 
+echo html_writer::end_tag('div');
+echo html_writer::empty_tag('br', array('style'=>'clear: both;'));
 
 // Footer (REQUIRED CODE)
+echo html_writer::start_tag('div', array('id'=>'page-footer'));
+echo html_writer::end_tag('div');
 
- echo html_writer::start_tag('div', array('id'=>'page-footer'));
- echo html_writer::end_tag('div'); 
- 
 // Footer 
- if (!empty($coursefooter)) {
- echo html_writer::start_tag('div', array('id'=>'course-footer'));
- echo $coursefooter;
- echo html_writer::end_tag('div');
- }
- if ($hasfooter) {
- echo html_writer::start_tag('div', array('id'=>'footerwrapper'));
- echo html_writer::start_tag('div', array('id'=>'footerinner'));
- include('footer.php');
- echo html_writer::end_tag('div'); 
- 
+if (!empty($coursefooter)) {
+echo html_writer::start_tag('div', array('id'=>'course-footer'));
+echo $coursefooter;
+echo html_writer::end_tag('div');
+}
+if ($hasfooter) {
+echo html_writer::start_tag('div', array('id'=>'footerwrapper'));
+echo html_writer::start_tag('div', array('id'=>'footerinner'));
+include('footer.php');
+echo html_writer::end_tag('div');
+
 // Credit
- 
- echo html_writer::start_tag('div', array('id'=>'themeorigin'));
- echo html_writer::link('http://moodle.org/plugins/view.php?plugin=theme_aardvark', get_string('credit', 'theme_aardvark'));
- echo ' | ';
- echo html_writer::link('http://moodle.org', 'moodle.org');
- }
-	 
+echo html_writer::start_tag('div', array('id'=>'themeorigin'));
+echo html_writer::link('http://moodle.org/plugins/view.php?plugin=theme_aardvark', get_string('credit', 'theme_aardvark'));
+echo ' | ';
+echo html_writer::link('http://moodle.org', 'moodle.org');
+}
+
 // The end
-	 
- echo $OUTPUT->standard_end_of_body_html();
- echo html_writer::end_tag('body'); 
- echo html_writer::end_tag('html'); 
-	  ?>
+echo $OUTPUT->standard_end_of_body_html();
+echo html_writer::end_tag('body');
+echo html_writer::end_tag('html');
+?>
