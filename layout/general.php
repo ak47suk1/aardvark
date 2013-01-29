@@ -140,6 +140,7 @@ echo html_writer::end_tag('div');
 }
 
 // Page content
+echo html_writer::start_tag('div', array('id'=>'page'));
 echo html_writer::start_tag('div', array('id'=>'page-content'));
 echo html_writer::start_tag('div', array('id'=>'region-main-box'));
 echo html_writer::start_tag('div', array('id'=>'region-post-box'));
@@ -171,6 +172,7 @@ echo html_writer::end_tag('div');
 echo html_writer::end_tag('div');
 }
 
+echo html_writer::end_tag('div');
 echo html_writer::end_tag('div');
 echo html_writer::end_tag('div');
 echo html_writer::end_tag('div');
