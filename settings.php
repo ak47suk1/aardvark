@@ -1,10 +1,8 @@
 <?php
-
-
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-	
+
 // Fullscreen Toggle
 $name = 'theme_aardvark/width';
 $title = get_string('width','theme_aardvark');
@@ -84,7 +82,6 @@ $setting = new admin_setting_configcolourpicker($name, $title, $description, $de
 $settings->add($setting);
 
 // Profilebar custom block title setting
-
 $name = 'theme_aardvark/profilebarcustomtitle';
 $title = get_string('profilebarcustomtitle','theme_aardvark');
 $description = get_string('profilebarcustomtitledesc', 'theme_aardvark');
@@ -93,16 +90,14 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Profilebar custom block setting
-
 $name = 'theme_aardvark/profilebarcustom';
 $title = get_string('profilebarcustom','theme_aardvark');
 $description = get_string('profilebarcustomdesc', 'theme_aardvark');
 $default = '';
 $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
 $settings->add($setting);
-	
-// Email url setting
 
+// Email url setting
 $name = 'theme_aardvark/emailurl';
 $title = get_string('emailurl','theme_aardvark');
 $description = get_string('emailurldesc', 'theme_aardvark');
@@ -111,7 +106,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Title Date setting
-
 $name = 'theme_aardvark/titledate';
 $title = get_string('titledate','theme_aardvark');
 $description = get_string('titledatedesc', 'theme_aardvark');
@@ -121,7 +115,6 @@ $setting = new admin_setting_configselect($name, $title, $description, $default,
 $settings->add($setting);
 
 // Copyright setting
-
 $name = 'theme_aardvark/copyright';
 $title = get_string('copyright','theme_aardvark');
 $description = get_string('copyrightdesc', 'theme_aardvark');
@@ -147,7 +140,6 @@ $setting = new admin_setting_confightmleditor($name, $title, $description, $defa
 $settings->add($setting);
 
 // Facebook url setting
-
 $name = 'theme_aardvark/facebook';
 $title = get_string('facebook','theme_aardvark');
 $description = get_string('facebookdesc', 'theme_aardvark');
@@ -156,7 +148,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Twitter url setting
-
 $name = 'theme_aardvark/twitter';
 $title = get_string('twitter','theme_aardvark');
 $description = get_string('twitterdesc', 'theme_aardvark');
@@ -165,7 +156,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Google+ url setting
-
 $name = 'theme_aardvark/googleplus';
 $title = get_string('googleplus','theme_aardvark');
 $description = get_string('googleplusdesc', 'theme_aardvark');
@@ -174,7 +164,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Flickr url setting
-
 $name = 'theme_aardvark/flickr';
 $title = get_string('flickr','theme_aardvark');
 $description = get_string('flickrdesc', 'theme_aardvark');
@@ -183,7 +172,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Picasa url setting
-
 $name = 'theme_aardvark/picasa';
 $title = get_string('picasa','theme_aardvark');
 $description = get_string('picasadesc', 'theme_aardvark');
@@ -192,7 +180,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Tumblr url setting
-
 $name = 'theme_aardvark/tumblr';
 $title = get_string('tumblr','theme_aardvark');
 $description = get_string('tumblrdesc', 'theme_aardvark');
@@ -201,7 +188,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Instagram url setting
-
 $name = 'theme_aardvark/instagram';
 $title = get_string('instagram','theme_aardvark');
 $description = get_string('instagramdesc', 'theme_aardvark');
@@ -210,7 +196,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Blogger url setting
-
 $name = 'theme_aardvark/blogger';
 $title = get_string('blogger','theme_aardvark');
 $description = get_string('bloggerdesc', 'theme_aardvark');
@@ -219,7 +204,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // LinkedIn url setting
-
 $name = 'theme_aardvark/linkedin';
 $title = get_string('linkedin','theme_aardvark');
 $description = get_string('linkedindesc', 'theme_aardvark');
@@ -228,7 +212,6 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // YouTube url setting
-
 $name = 'theme_aardvark/youtube';
 $title = get_string('youtube','theme_aardvark');
 $description = get_string('youtubedesc', 'theme_aardvark');
@@ -237,13 +220,10 @@ $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
 
 // Vimeo url setting
-
 $name = 'theme_aardvark/vimeo';
 $title = get_string('vimeo','theme_aardvark');
 $description = get_string('vimeodesc', 'theme_aardvark');
 $default = '';
 $setting = new admin_setting_configtext($name, $title, $description, $default);
 $settings->add($setting);
-
-
 }
