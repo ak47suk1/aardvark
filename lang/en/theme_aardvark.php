@@ -27,7 +27,6 @@ $string['backpositionfixed'] = 'Centred (Fixed)';
 $string['backpositiontiled'] = 'Repeat (Tiled)';
 $string['backpositionrepeat'] = 'Repeat (Horizonal)';
 
-
 $string['backcolor'] = 'Background Colour';
 $string['backcolordesc'] = 'Change the colour of the background. (This is the area either side of the main content and does not affect the main content area)';
 
@@ -54,7 +53,6 @@ $string['ceopdesc'] = 'Enable CEOP reporting.';
 $string['ceopnone'] = 'Disabled';
 $string['ceopaus'] = 'Enable Australia';
 $string['ceopuk'] = 'Enable United Kingdom';
-
 
 $string['email'] = 'Email';
 $string['emailurl'] = 'Email URL';
