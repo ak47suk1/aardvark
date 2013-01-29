@@ -1,23 +1,20 @@
-	<div class="footer_block">
-        <h4>©<?php
+<div class="footer_block">
+<h4>©<?php
 echo date("Y"); echo " "; echo $PAGE->theme->settings->copyright; ?></h4>
-		<?php
-            echo $OUTPUT->login_info();			
-			echo $OUTPUT->standard_footer_html();
-            if ($hasceop) {?><ul><li><a href="<?php echo $PAGE->theme->settings->ceop;?> "><img src="<?php echo $OUTPUT->pix_url('ceopreport', 'theme')?>" /></a></li></ul> <?php } else {}?> 
-	</div>
+<?php
+echo $OUTPUT->login_info();		
+echo $OUTPUT->standard_footer_html();
+if ($hasceop) {?><ul><li><a href="<?php echo $PAGE->theme->settings->ceop;?> "><img src="<?php echo $OUTPUT->pix_url('ceopreport', 'theme')?>" /></a></li></ul> <?php } else {}?> 
+</div>
 
-		<div class="footerdisclaimer" id="footerdisclaimer">
-		<?php if ($hasdisclaimer) {?><h4><?php echo get_string('disclaimer','theme_aardvark');?></h4> <?php } else {}?>
-        <?php if ($hasdisclaimer) {echo $PAGE->theme->settings->disclaimer;} else {}?>
-        
-        
-	</div>
+<div class="footerdisclaimer" id="footerdisclaimer">
+<?php if ($hasdisclaimer) {?><h4><?php echo get_string('disclaimer','theme_aardvark');?></h4> <?php } else {}?>
+<?php if ($hasdisclaimer) {echo $PAGE->theme->settings->disclaimer;} else {}?>
+</div>
 
-		<div class="footersocial" id="footersocial">
-        <h4>Social Networks</h4>
+<div class="footersocial" id="footersocial">
+<h4>Social Networks</h4>
 <ul>
-
 <?php if ($hasfacebook) {?><a href="<?php echo $PAGE->theme->settings->facebook;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/facebook', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hastwitter) {?><a href="<?php echo $PAGE->theme->settings->twitter;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/twitter', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hasgoogleplus) {?><a href="<?php echo $PAGE->theme->settings->googleplus;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/googleplus', 'theme')?>" /></li></a> <?php } else {}?>
@@ -29,7 +26,5 @@ echo date("Y"); echo " "; echo $PAGE->theme->settings->copyright; ?></h4>
 <?php if ($haslinkedin) {?><a href="<?php echo $PAGE->theme->settings->linkedin;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/linkedin', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hasyoutube) {?><a href="<?php echo $PAGE->theme->settings->youtube;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/youtube', 'theme')?>" /></li></a> <?php } else {}?>
 <?php if ($hasvimeo) {?><a href="<?php echo $PAGE->theme->settings->vimeo;?> "><li><img src="<?php echo $OUTPUT->pix_url('social/vimeo', 'theme')?>" /></li></a> <?php } else {}?>
-
-
-		  </ul>
-		</div>
+</ul>
+</div>
